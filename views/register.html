@@ -1,0 +1,57 @@
+<!DOCTYPE html>  
+<html lang="en">  
+<head>  
+	<meta charset="UTF-8" name="viewport" content="width=device-width, initial-scale=1" />	
+    <title>register</title>  
+    <link rel="stylesheet" type="text/css" href="Login.css"/>  
+	<script src="https://unpkg.com/vue@next"></script>
+</head>  
+<body background="../assets/star.jpeg">
+	<div id="verify">
+    <div id="login">  
+        <h1>Register</h1>  
+        <div>  
+            <input id="Username" type="text"  placeholder="Username" name="u"></input>  
+            <input id="Password" type="password"  placeholder="Password" name="p"></input>  
+            <input id="RepeatPassword" type="password"  placeholder="RepeatPassword" name="p2"></input>  
+			<button class="button"  v-on:click="register">register</button>
+        </div>  
+    </div>
+	</div>
+</body>
+ <script>
+	const verify = {
+		data() {
+			return {
+				counter: 0
+			}
+		},
+	  methods: {
+		register() {
+			var Username = document.getElementById('Username').value;
+			var Password = document.getElementById('Password').value;
+			var RepeatPassword = document.getElementById('RepeatPassword').value;
+			if(!Username || !Password || !RepeatPassword){
+				alert("Please input the content");
+                return;
+			}
+			if(Password !== RepeatPassword){
+                alert("The two passwords are inconsistent");
+                return;
+            }
+			window.localStorage.setItem("Username", Username);
+			window.localStorage.setItem("Password", Password);
+			alert("register success! please login")
+            window.location.href = "login.html";   
+		  
+		}
+	}
+}
+Vue.createApp(verify).mount('#verify')
+</script>
+<style type="text/css" media="screen">
+button.button { background:url(rss-feed-img.png) repeat 0px 0px; width: 123px; height: 44px; display: block; }
+button.button span { display: none; }
+button.button:hover { background: url(rss-feed-img.png) repeat 0px -44px; }
+</style>
+</html>  

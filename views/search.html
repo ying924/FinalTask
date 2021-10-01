@@ -1,0 +1,126 @@
+<!DOCTYPE html>  
+<html lang="en">  
+<head>  
+    <meta charset="UTF-8">  
+    <title>Search</title>  
+    <link rel="stylesheet" type="text/css" href="search.css"/>  
+	<script src="https://unpkg.com/vue@next"></script>
+</head>  
+<body bgcolor="#DEE2EC">  
+    <div id="search">  
+        <div>
+            <input type="text" required="required" placeholder="name" name="keyword"></input>  
+            <button type="button">search</button>
+            <button>asc</button>
+            <button>desc</button>
+        </div>
+        <div>
+            <ul>
+                <li>
+                    <span>area</span>
+                    <select>
+                        <option value="Sydney">Sydney</option>
+                        <option value="Brisbane">Brisbane</option>
+                        <option value="Melbourne">Melbourne</option>
+                    </select>
+                </li>
+                <li>
+                    <span>price range</span>
+                    <input id="price_start" type="number"/>-
+                    <input id="price_end" type="number">
+                </li>
+                <li>
+                    <span>date range</span>
+                    <input type="date" id="date_star"/>-
+                    <input type="date" id="date_end"/>
+                </li>
+            </ul>
+        </div>
+    </div>
+    <div id="detail">
+        <table cellspacing="5" cellpadding="5">
+            <tr>
+                <th >
+                    <span><image class="resultImage" src="https://m.media-amazon.com/images/I/71CGF458KbL._AC_UL320_.jpg 1x, https://m.media-amazon.com/images/I/71CGF458KbL._AC_UL480_FMwebp_QL65_.jpg 1.5x, https://m.media-amazon.com/images/I/71CGF458KbL._AC_UL640_FMwebp_QL65_.jpg 2x, https://m.media-amazon.com/images/I/71CGF458KbL._AC_UL800_FMwebp_QL65_.jpg 2.5x, https://m.media-amazon.com/images/I/71CGF458KbL._AC_UL960_FMwebp_QL65_.jpg" /></span>
+                </th>
+                <th>
+                    <a href="detail.html">macbook air</a>
+                </th>
+                <th>
+                    <span> $ 1350</span>
+                </th>
+				<th>
+					<div id = "app">
+						<button @click = "counter++" style = "font-size:25px;">addCart</button>
+						<button @click = "counter--" style = "font-size:25px;">removeCart</button>
+						<p style = "font-size:25px;">{{ counter }}</p>
+					</div>
+                </th>
+
+            </tr>
+            <tr>
+                <th>
+                    <span><image  class="resultImage" src="https://m.media-amazon.com/images/I/513FTt9k43S._AC_UL320_.jpg 1x, https://m.media-amazon.com/images/I/513FTt9k43S._AC_UL480_FMwebp_QL65_.jpg 1.5x, https://m.media-amazon.com/images/I/513FTt9k43S._AC_UL640_FMwebp_QL65_.jpg 2x, https://m.media-amazon.com/images/I/513FTt9k43S._AC_UL800_FMwebp_QL65_.jpg 2.5x, https://m.media-amazon.com/images/I/513FTt9k43S._AC_UL960_FMwebp_QL65_.jpg" /></span>
+                </th>
+                <th>
+                    <a href="detail.html">iPhone 12</a>
+                </th>
+                <th>
+                    <span> $ 998</span>
+                </th>
+				<th>
+					<div id = "app2">
+						<button @click = "counter2++" style = "font-size:25px;">addCart</button>
+						<button @click = "counter2--" style = "font-size:25px;">removeCart</button>
+						<p style = "font-size:25px;">{{ counter2 }}</p>
+					</div>
+                </th>
+            </tr>
+        </table>
+    </div>
+
+    <div class="page">
+        <a href="" title="pre">pre</a>
+        <a class="num cur" href="" title="1">1</a>
+        <a class="num" href="" title="2">2</a>
+        <a class="num" href="" title="3">3</a>
+        <a class="num" href="" title="4">4</a>
+        <a class="num" href="" title="5">5</a>
+        <a href="" title="next">next</a>
+        <a href="contactUs.html" title="contactUs">contact us</a>
+	</div>
+</body>
+<script>
+const app = {
+  data() {
+    return {
+      counter: 0
+    }
+  }
+}
+var stock = 5
+vm = Vue.createApp(app).mount('#app')
+vm.$watch('counter', function(nval, oval) {
+	if(nval > stock){
+		alert('Exceeded inventory limit!');
+		return;
+	}
+	if(nval < 0){
+		alert('Can no longer remove!');
+		return;
+	}
+});
+const app2 = {
+  data() {
+    return {
+      counter2: 0
+    }
+  }
+}
+var stock2 = 6
+vm = Vue.createApp(app2).mount('#app2')
+vm.$watch('counter2', function(nval2, oval2) {
+
+});
+</script>  
+</html>  

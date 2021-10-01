@@ -1,0 +1,37 @@
+.page {
+    width: 928px; 
+    display: table; 
+    padding: 15px 0px 8px; 
+    text-align: center; 
+    font-size: 12px;
+}
+.page a {
+    width: auto; 
+    height: 19px; 
+    line-height: 19px; 
+    padding: 0px 10px;
+     margin: 0px 5px; 
+     display: inline-block; 
+     color: #7f7f7f; 
+     background-color: #fff; 
+     border: 1px solid #7f7f7f;
+    }
+
+.page a.num {
+    font-family: Arial; 
+    padding: 0px 6px;
+}
+
+.page a:hover, .page a.cur {
+    background-color: #9c0004; 
+    color: #fff; 
+    border: 1px solid #9c0004;
+}
+
+.resultImage {
+    border-radius: 8px;
+    border: 1px solid #ddd;
+    padding: 5px;
+    max-width: 30%;
+}
+
