@@ -1,91 +1,63 @@
 <html>
 <head>
-<link rel="stylesheet" type="text/css" href="..\css\main.css">
+    <meta charset="UTF-8">
+    <meta content="width=device-width, initial-scale=1.0" name="view" >
+    <title>ContactUs</title>
 </head>
-<body bgcolor="#DEE2EC">
-
+<body background="../assets/star.jpeg">
+    <div class="back-logo"><img src="../assets/back-logo.png" alt="something wrong"></div>
 	<div class="major" align="center">
-			<a href="search.html"><h1>Back to Home Page</h1></a>
+		<a href="search.html"><h1>Back to Home Page</h1></a>
 	</div>
-  <div class="major" align="center">
-			<h1>E-Commercial</h1>
-  </div>
-  <div class="home">
-    <Catalog msg="Welcome to E-Medical"/>
-  </div>
-
-  <div>
-
-	<p align="center">
-      On this site, users can exchange unused items with others on the site.
-    </p>
-	<p align="center">
-      They can exchange unwanted items on the site in exchange for what they need.
-    </p>
-	<p align="center">
-      They can search the items they need on the front page, and then find favorite items can click on the replacement request, once the partners approved the request, they can start talking, and use of this web site the built-in chat and video function display items, once again to confirm whether you like or need, so as to decide whether to choose the replacement.
-    </p>
-	<p align="center">
-      At the same time, the website has built-in logistics query function, you can query logistics information at any time.
-	</p>
-	
-	<header class="major" align="center">
-			<h2 >About us</h2>
-	</header>
-    <ul>
-	  <li><a>Address: Shanghai Lujiazui</a></li>
-	  <li><a>Email: E-Commercial@gmail.com</a></li>
-      <li><a>Tel: 12311238121312</a></li>
-	  <li><a>Your Scoring</a>
-	  <select name="Scoring">
-		<option value="1">1</option>
-		<option value="2">2</option>
-		<option value="3">3</option>
-		<option value="4">4</option>
-		<option value="5">5</option>
-	  </select>
-	  </li>
-    </ul>
-  </div>
-<script>
-</script>
+    <div class="ground">  
+        <div class="imput">
+            <input type="text" placeholder="your name">
+            <input type="text" placeholder="your phone number">
+			<textarea rows="3" cols="20" placeholder="your advice">
+			</textarea>
+            <button>send</button>
+        </div>
+    </div>
 </body>
+    <style>
+        .back-logo {
+			height: 93px;
+            width: 95px;
+            margin: 22px auto;
+        }
+        .ground {
+            margin: 0 auto;
+            width: 380px;
+            background-color: #fff;
+            padding: 38px 0 22px;
+            font-size: 12px;
+            color: #987;
+            border-radius: 5px;
+        }
+        .ground input {
+            imput-sizing: border-imput;
+            display: block;
+            width: 305px;
+            height: 43px;
+            padding-left: 19px;
+            margin-bottom: 20px;
+            border:1px solid #cecece;
+            border-radius: 6px;
+        }
+        input::-webkit-input-placeholder {
+            color: #cecece;
+        }
+        .imput {
+            margin: 0 39px;
+        }
+        .imput button {
+            width: 300px;
+            background-color: #5193Fe;
+            color: #ffe;
+            text-align: center;
+            font-size: 20px;
+            line-height: 40px;
+            margin: 14px 0 30px;
+        }
+    </style>
 </html>
-<style>
-
-h3 {
-  margin: 40px 0 0;
-}
-ul {
-  list-style: disc;
-  margin: 0 0 2em 0;
-  padding-left: 1em;
-}
-li {
-  /* display: inline-block; */
-  text-align: left;
-  margin: 0 0 0 45%;
-}
-
-
-ul.actions {
-  display: flex;
-  cursor: default;
-  margin: 0 auto;
-  list-style-type: none;
-}
-ul.actions li {
-  padding: 0 0 0 1em;
-  vertical-align: middle; 
-  margin: 0 auto;
-}
-
-header.major > :last-child {
-  border-bottom: solid 3px #f56a6a;
-  display: inline-block;
-  margin: 5% 0 2em 0;
-  padding: 0 0.75em 0.5em 0; 
-}
-
-</style>
-
